@@ -1,2 +1,2 @@
 # PreSchool_Library
-I simple Java library program
+A simple Java library program I made for my girlfriend.
