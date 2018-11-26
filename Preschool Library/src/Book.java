@@ -10,7 +10,6 @@ public class Book implements Serializable {
 	public String[] genres;
 
 	public String[] allStrings;
-	
 
 	private static final long serialVersionUID = 53;
 
@@ -19,8 +18,6 @@ public class Book implements Serializable {
 		initVariables();
 
 	}
-
-	
 
 	public Book(String[] bookStrings) {
 
@@ -114,30 +111,25 @@ public class Book implements Serializable {
 			allStrings[i] = "Blank";
 		}
 	}
-	
-	public static Comparator<Book>AuthorComparator = new Comparator<Book> ()
-	{
-		public int compare(Book b1, Book b2)
-		{
-			
+
+	public static Comparator<Book> AuthorComparator = new Comparator<Book>() {
+		public int compare(Book b1, Book b2) {
+
 			String bookAuthName1 = b1.getAuthor().toLowerCase();
 			String bookAuthName2 = b2.getAuthor().toLowerCase();
-			
+
 			return bookAuthName1.compareTo(bookAuthName2);
 		}
 	};
-	
-	public static Comparator<Book>TitleComparator = new Comparator<Book> ()
-	{
-		public int compare(Book b1, Book b2)
-		{
-			
+
+	public static Comparator<Book> TitleComparator = new Comparator<Book>() {
+		public int compare(Book b1, Book b2) {
+
 			String bookTitleName1 = b1.getTitle().toLowerCase();
 			String bookTitleName2 = b2.getTitle().toLowerCase();
-			
+
 			return bookTitleName1.compareTo(bookTitleName2);
 		}
 	};
-
 
 }
